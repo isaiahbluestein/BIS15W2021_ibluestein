@@ -1,7 +1,7 @@
 
 # Isaiah's BIS15L Repository 
 
-This repository holds the homework and projects for BIS15L, Winter Quarter 2021   
+This repository holds homework and projects for BIS15L, Winter Quarter, 2021   
 
 ## Contact Info
 
