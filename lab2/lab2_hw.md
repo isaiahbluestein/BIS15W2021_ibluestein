@@ -16,7 +16,11 @@ Make sure to use the formatting conventions of RMarkdown to make your report nea
 
 1. What is a vector in R?  
 
+A vector is a simple data structure. It is an object that is assigned a sequence of elements of the same type of data. 
+
 2. What is a data matrix in R?  
+
+A matrix is a two-dimensional arrangement of data with rows and columns. 
 
 3. Below are data collected by three scientists (Jill, Steve, Susan in order) measuring temperatures of eight hot springs. Run this code chunk to create the vectors.  
 
