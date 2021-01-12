@@ -1,0 +1,17 @@
+---
+title: "Useful Packages for BIS15L"
+output: html_notebook
+---
+
+```{r}
+#install.packages("tidyverse", repos = "http://cran.us.r-project.org")
+
+
+#install.packages("janitor", repos = "http://cran.us.r-project.org")
+#install.packages("naniar", repos = "http://cran.us.r-project.org")
+#install.packages("shiny")
+
+
+#if (!require(pkg)) { install.packages(pkg); library(pkg) } (you might need character.only=TRUE
+```
+

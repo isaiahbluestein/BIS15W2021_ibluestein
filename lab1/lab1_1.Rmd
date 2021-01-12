@@ -2,10 +2,8 @@
 title: "Getting Started"
 date: "`r Sys.Date()`"
 output:
-  html_document:
-    theme: spacelab
-    toc: yes
-    toc_float: yes
+  md_document:
+    variant: markdown_github
 ---
 
 ```{r setup, include = FALSE}
