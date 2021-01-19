@@ -1,0 +1,19 @@
+---
+title: "Practive_with_csv_data"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+abalone = readr::read_csv("Abalone_csv_data.csv")
+
+```
+```{r}
+glimpse(abalone)
+names(abalone)
+```
+
+

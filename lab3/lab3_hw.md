@@ -213,9 +213,12 @@ large_sleep_mean
 
 ```r
 sleep[order(sleep$sleep_total),]
+max(sleep$sleep_total)
+sleepmax <- subset(sleep, sleep_total>=19.9)
+sleepmax
 ```
 
-```
+
 ## # A tibble: 83 x 11
 ##    name  genus vore  order conservation sleep_total sleep_rem sleep_cycle awake
 ##    <chr> <chr> <chr> <chr> <chr>              <dbl>     <dbl>       <dbl> <dbl>
