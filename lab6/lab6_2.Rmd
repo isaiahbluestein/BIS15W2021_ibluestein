@@ -97,23 +97,35 @@ penguins %>%
   tabyl(species, island) %>% 
   adorn_percentages() %>%
   adorn_pct_formatting(digits = 1) %>%
-  adorn_ns()
+   adorn_ns()
+ 
 ```
 
 ## Practice
 1. Produce a summary of the mean for bill_length_mm, bill_depth_mm, flipper_length_mm, and body_mass_g within Adelie penguins only. Be sure to provide the number of samples.
 ```{r}
+names(penguins)
+  
+```
 
+```{r}
+penguins %>%
+  filter(species == "Adelie") %>% 
+  summarise(mean_bill_length_mm=mean(bill_length_mm, na.rm=TRUE), mean_bill_depth_mm = mean(bill_depth_mm, na.rm=TRUE), mean_flipper_length_mm = mean(flipper_length_mm, na.rm=TRUE), mean_body_mass_g = mean(body_mass_g, na.rm = T), n=n())
 ```
 
 2. How does the mean of `bill_length_mm` compare between penguin species?
 ```{r}
-
+penguins %>% 
+  group_by(species) %>% 
+  summarise(mean_bill_length=mean(bill_length_mm, na.rm = T))
 ```
 
 3. For some penguins, their sex is listed as NA. Where do these penguins occur?
 ```{r}
-
+penguins %>% 
+  tabyl(island, sex)
+  
 ```
 
 ## `across()`
@@ -167,8 +179,23 @@ penguins %>%
 
 ## Practice
 1. Produce separate summaries of the mean and standard deviation for bill_length_mm, bill_depth_mm, and flipper_length_mm for each penguin species. Be sure to provide the number of samples.  
-```{r}
 
+```{r}
+names(penguins)
+help(sd)
+```
+
+```{r}
+penguins %>%
+  group_by(species) %>% 
+  summarise(across(contains("mm"), mean, na.rm=TRUE), n=n())
+
+  
+```
+```{r}
+penguins %>%
+  group_by(species) %>% 
+  summarise(across(contains("mm"), sd, na.rm=TRUE), n=n())
 ```
 
 
