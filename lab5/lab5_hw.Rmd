@@ -173,6 +173,10 @@ superhero_info %>%
 superhero_info %>% 
   filter(height > 450)
 ```
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 ## Height to Weight Ratio
 13. It's easy to be strong when you are heavy and tall, but who is heavy and short? Which superheros have the highest height to weight ratio?
@@ -184,7 +188,7 @@ superhero_info %>%
 
 ```
 
-
+</div>
 
 ## `superhero_powers`
 Have a quick look at the `superhero_powers` data frame.  
