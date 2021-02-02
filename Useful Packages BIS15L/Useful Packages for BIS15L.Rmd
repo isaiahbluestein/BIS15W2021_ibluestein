@@ -10,6 +10,8 @@ output: html_notebook
 #install.packages("janitor", repos = "http://cran.us.r-project.org")
 #install.packages("naniar", repos = "http://cran.us.r-project.org")
 #install.packages("shiny")
+#install.packages("naniar")
+#install.packages("visdat")
 
 
 #if (!require(pkg)) { install.packages(pkg); library(pkg) } (you might need character.only=TRUE
