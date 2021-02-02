@@ -21,11 +21,6 @@ Make sure to use the formatting conventions of RMarkdown to make your report nea
 library(tidyverse)
 library(janitor)
 library(skimr)
-getwd()
-```
-
-```
-## [1] "/Users/isaiahbluestein/Desktop/BIS15W2021_ibluestein/lab7"
 ```
 
 ## Data
