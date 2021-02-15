@@ -115,8 +115,12 @@ deserts %>%
   theme(plot.title = element_text(size = rel(1.5), hjust = 0.5))
 ```
 
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
-6. Add another layer to your answer from #4 using `geom_point` to get an idea of how many measurements were taken for each species.
+6. Add another layer to your answer from #5 using `geom_point` to get an idea of how many measurements were taken for each species.
 
 
 ```{r}
@@ -133,6 +137,7 @@ deserts %>%
   theme(plot.title = element_text(size = rel(1.5), hjust = 0.5))
 ```
 
+</div>
 
 
 
@@ -173,6 +178,10 @@ deserts %>%
 ```
 
 
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 9. Which two species have, on average, the highest weight? Once you have identified them, make a new column that is a ratio of `weight` to `hindfoot_length`. Make a plot that shows the range of this new ratio and fill by sex.
 ```{r}
@@ -182,6 +191,7 @@ deserts %>%
   arrange(desc(average_weight))
 ```
 #Albigula and spectabilis have the highest mean weight. 
+</div>
 
 10. Make one plot of your choice! Make sure to include at least two of the aesthetics options you have learned.
 ```{r}
