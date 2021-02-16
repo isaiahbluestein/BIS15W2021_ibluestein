@@ -1,0 +1,41 @@
+---
+title: "Turtle_Project"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(janitor)
+library(here)
+library(naniar)
+``` 
+
+```{r}
+turtles <- readr::read_csv(here("Final Project", "Data", "pop_survey_tagging_data.csv")) %>% clean_names()
+```
+```{r}
+glimpse(turtles)
+```
+```{r}
+turtles
+
+```
+
+
+```{r}
+summary(turtles)
+```
+```{r}
+naniar::miss_var_summary(turtles)
+```
+```{r}
+turtles %>% 
+  select(sex_testosterone_level_2)
+```
+
