@@ -77,12 +77,11 @@ turtles %>%
 ```
 ```{r}
 turtles %>% 
-
     mutate(mass_category = case_when(weight <= 30 ~ "small", weight >= 30 ~ "large")) %>% 
   group_by(year) %>% 
   ggplot(aes(x = year, fill = mass_category))+
   geom_bar()+
-  labs(title = "Turtle Capture by Weight",
+  labs(title = "Turtle Capture by Weight Class",
        x = "Year",
        y= "n")+
     theme_linedraw()+
