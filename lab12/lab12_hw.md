@@ -1,7 +1,7 @@
 ---
 title: "Lab 12 Homework"
 author: "Isaiah Bluestein"
-date: "2021-02-25"
+date: "2021-03-01"
 output:
   html_document: 
     theme: spacelab
@@ -39,7 +39,7 @@ grizzly <- readr::read_csv(here("lab12", "data", "bear-sightings.csv"))
 
 ```
 ## 
-## ── Column specification ────────────────────────────────────────────────────────
+## -- Column specification --------------------------------------------------------
 ## cols(
 ##   bear.id = col_double(),
 ##   longitude = col_double(),
@@ -55,9 +55,9 @@ glimpse(grizzly)
 ```
 ## Rows: 494
 ## Columns: 3
-## $ bear.id   <dbl> 7, 57, 69, 75, 104, 108, 115, 116, 125, 135, 137, 162, 185, …
-## $ longitude <dbl> -148.9560, -152.6228, -144.9374, -152.8485, -143.2948, -149.…
-## $ latitude  <dbl> 62.65822, 58.35064, 62.38227, 59.90122, 61.07311, 62.91605, …
+## $ bear.id   <dbl> 7, 57, 69, 75, 104, 108, 115, 116, 125, 135, 137, 162, 185, ~
+## $ longitude <dbl> -148.9560, -152.6228, -144.9374, -152.8485, -143.2948, -149.~
+## $ latitude  <dbl> 62.65822, 58.35064, 62.38227, 59.90122, 61.07311, 62.91605, ~
 ```
 
 ```r
@@ -89,7 +89,83 @@ map1 <- get_map(bbox, maptype = "terrain", source = "stamen")
 ```
 
 ```
-## Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.
+## Source : http://tile.stamen.com/terrain/5/1/6.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/2/6.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/3/6.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/4/6.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/1/7.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/2/7.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/3/7.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/4/7.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/1/8.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/2/8.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/3/8.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/4/8.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/1/9.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/2/9.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/3/9.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/4/9.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/1/10.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/2/10.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/3/10.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/4/10.png
 ```
 
 
@@ -117,7 +193,7 @@ wolves <- readr::read_csv(here("lab12", "data", "wolves_data", "wolves_dataset.c
 
 ```
 ## 
-## ── Column specification ────────────────────────────────────────────────────────
+## -- Column specification --------------------------------------------------------
 ## cols(
 ##   .default = col_double(),
 ##   pop = col_character(),
@@ -125,7 +201,7 @@ wolves <- readr::read_csv(here("lab12", "data", "wolves_data", "wolves_dataset.c
 ##   sex = col_character(),
 ##   color = col_character()
 ## )
-## ℹ Use `spec()` for the full column specifications.
+## i Use `spec()` for the full column specifications.
 ```
 
 ```r
@@ -135,29 +211,29 @@ glimpse(wolves)
 ```
 ## Rows: 1,986
 ## Columns: 23
-## $ pop                <chr> "AK.PEN", "AK.PEN", "AK.PEN", "AK.PEN", "AK.PEN", "…
-## $ year               <dbl> 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2006, 200…
-## $ age_cat            <chr> "S", "S", "A", "S", "A", "A", "A", "P", "S", "P", "…
-## $ sex                <chr> "F", "M", "F", "M", "M", "M", "F", "M", "F", "M", "…
-## $ color              <chr> "G", "G", "G", "B", "B", "G", "G", "G", "G", "G", "…
-## $ lat                <dbl> 57.03983, 57.03983, 57.03983, 57.03983, 57.03983, 5…
-## $ long               <dbl> -157.8427, -157.8427, -157.8427, -157.8427, -157.84…
-## $ habitat            <dbl> 254.08, 254.08, 254.08, 254.08, 254.08, 254.08, 254…
-## $ human              <dbl> 10.42, 10.42, 10.42, 10.42, 10.42, 10.42, 10.42, 10…
-## $ pop_density        <dbl> 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, …
-## $ pack_size          <dbl> 8.78, 8.78, 8.78, 8.78, 8.78, 8.78, 8.78, 8.78, 8.7…
-## $ standard_habitat   <dbl> -1.6339, -1.6339, -1.6339, -1.6339, -1.6339, -1.633…
-## $ standard_human     <dbl> -0.9784, -0.9784, -0.9784, -0.9784, -0.9784, -0.978…
-## $ standard_pop       <dbl> -0.6827, -0.6827, -0.6827, -0.6827, -0.6827, -0.682…
-## $ standard_packsize  <dbl> 1.3157, 1.3157, 1.3157, 1.3157, 1.3157, 1.3157, 1.3…
-## $ standard_latitude  <dbl> 0.7214, 0.7214, 0.7214, 0.7214, 0.7214, 0.7214, 0.7…
-## $ standard_longitude <dbl> -2.1441, -2.1441, -2.1441, -2.1441, -2.1441, -2.144…
-## $ cav_binary         <dbl> 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
-## $ cdv_binary         <dbl> 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-## $ cpv_binary         <dbl> 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, …
-## $ chv_binary         <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, …
-## $ neo_binary         <dbl> NA, NA, NA, 0, 0, NA, NA, 1, 0, 1, NA, 0, NA, NA, N…
-## $ toxo_binary        <dbl> NA, NA, NA, 1, 0, NA, NA, 1, 0, 0, NA, 0, NA, NA, N…
+## $ pop                <chr> "AK.PEN", "AK.PEN", "AK.PEN", "AK.PEN", "AK.PEN", "~
+## $ year               <dbl> 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2006, 200~
+## $ age_cat            <chr> "S", "S", "A", "S", "A", "A", "A", "P", "S", "P", "~
+## $ sex                <chr> "F", "M", "F", "M", "M", "M", "F", "M", "F", "M", "~
+## $ color              <chr> "G", "G", "G", "B", "B", "G", "G", "G", "G", "G", "~
+## $ lat                <dbl> 57.03983, 57.03983, 57.03983, 57.03983, 57.03983, 5~
+## $ long               <dbl> -157.8427, -157.8427, -157.8427, -157.8427, -157.84~
+## $ habitat            <dbl> 254.08, 254.08, 254.08, 254.08, 254.08, 254.08, 254~
+## $ human              <dbl> 10.42, 10.42, 10.42, 10.42, 10.42, 10.42, 10.42, 10~
+## $ pop_density        <dbl> 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, ~
+## $ pack_size          <dbl> 8.78, 8.78, 8.78, 8.78, 8.78, 8.78, 8.78, 8.78, 8.7~
+## $ standard_habitat   <dbl> -1.6339, -1.6339, -1.6339, -1.6339, -1.6339, -1.633~
+## $ standard_human     <dbl> -0.9784, -0.9784, -0.9784, -0.9784, -0.9784, -0.978~
+## $ standard_pop       <dbl> -0.6827, -0.6827, -0.6827, -0.6827, -0.6827, -0.682~
+## $ standard_packsize  <dbl> 1.3157, 1.3157, 1.3157, 1.3157, 1.3157, 1.3157, 1.3~
+## $ standard_latitude  <dbl> 0.7214, 0.7214, 0.7214, 0.7214, 0.7214, 0.7214, 0.7~
+## $ standard_longitude <dbl> -2.1441, -2.1441, -2.1441, -2.1441, -2.1441, -2.144~
+## $ cav_binary         <dbl> 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ~
+## $ cdv_binary         <dbl> 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+## $ cpv_binary         <dbl> 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, ~
+## $ chv_binary         <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, ~
+## $ neo_binary         <dbl> NA, NA, NA, 0, 0, NA, NA, 1, 0, 1, NA, 0, NA, NA, N~
+## $ toxo_binary        <dbl> NA, NA, NA, 1, 0, NA, NA, 1, 0, 0, NA, 0, NA, NA, N~
 ```
 
 ```r
@@ -178,7 +254,7 @@ wolves
 ##  8 AK.PEN  2006 P       M     G      57.0 -158.    254.  10.4           8
 ##  9 AK.PEN  2006 S       F     G      57.0 -158.    254.  10.4           8
 ## 10 AK.PEN  2006 P       M     G      57.0 -158.    254.  10.4           8
-## # … with 1,976 more rows, and 13 more variables: pack_size <dbl>,
+## # ... with 1,976 more rows, and 13 more variables: pack_size <dbl>,
 ## #   standard_habitat <dbl>, standard_human <dbl>, standard_pop <dbl>,
 ## #   standard_packsize <dbl>, standard_latitude <dbl>, standard_longitude <dbl>,
 ## #   cav_binary <dbl>, cdv_binary <dbl>, cpv_binary <dbl>, chv_binary <dbl>,
