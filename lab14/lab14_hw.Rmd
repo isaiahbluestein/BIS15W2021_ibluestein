@@ -23,6 +23,10 @@ library(qtlcharts)
 library(tidyverse)
 library(ggmap)
 ```
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 **1. We have a satellite collars on a number of different individuals and want to be able to quickly look at all of their recent movements at once. Please load all the data files from `us_individual_collar_data` and use for loop to create plots for all different individuals of the path they move on longitude and latitude.**
 ```{r}
@@ -38,7 +42,7 @@ for (i in 1:length(data)){
   )
 }
 ```
-
+</div>
 **2. Please load all the data files from `us_individual_collar_data` and combine all data into one data frame. Create a summary to show what is the maximum and minimum of recorded data points on longitude and latitude.**
 ```{r}
 all_collars <- lapply(collar, read_csv)
